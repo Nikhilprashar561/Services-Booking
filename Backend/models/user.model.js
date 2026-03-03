@@ -56,7 +56,7 @@ const UserSchema = new mongoose.Schema(
     role: {
       type: String,
       enum: ["customer"],
-      default: "customer",
+      required: true
     },
     city: {
       type: String,
@@ -69,6 +69,10 @@ const UserSchema = new mongoose.Schema(
     isBlocked: {
       type: Boolean,
       default: false,
+    },
+    refreshToken:{
+        type: String,
+        default: ""
     },
 
     // Job Related

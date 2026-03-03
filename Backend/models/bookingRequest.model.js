@@ -28,7 +28,11 @@ const bookingRequestSchema = new mongoose.Schema(
       ref: "localProvider",
       required: true,
     },
-
+    providerUsername: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     serviceCategory: {
       type: String,
       required: true,
@@ -46,14 +50,14 @@ const bookingRequestSchema = new mongoose.Schema(
     jobStatus: {
       type: String,
       enum: [
-        "Rejuested",
+        "Requested",
         "Accepted",
         "On the way",
         "in process",
         "Completed",
         "Cancelled",
       ],
-      default: "",
+      default: "Requested",
     },
     bookingDate: {
       type: Date,
@@ -78,7 +82,10 @@ const bookingRequestSchema = new mongoose.Schema(
       required: true,
       min: 0,
     },
-
+    workImage: {
+      type: String,
+      default: ""
+    },
     BeforeWork: [
       {
         type: String,

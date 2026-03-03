@@ -56,8 +56,9 @@ const localProviderSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      enum: ["loacl provider"],
-      default: "loacl provider",
+      enum: ["localProvider"],
+      required: true
+    //   default: "loacl provider",
     },
     city: {
       type: String,
@@ -70,6 +71,10 @@ const localProviderSchema = new mongoose.Schema(
     isBlocked: {
       type: Boolean,
       default: false,
+    },
+    refreshToken:{
+        type: String,
+        default: ""
     },
 
     // Job Related
@@ -119,7 +124,6 @@ const localProviderSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    isBlocked: Boolean,
   },
   { timestamps: true },
 );

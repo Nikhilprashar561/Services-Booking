@@ -35,11 +35,19 @@ const adminSchema = new mongoose.Schema(
       default:
         "https://res.cloudinary.com/da9c3vejh/image/upload/v1772457451/307ce493-b254-4b2d-8ba4-d12c080d6651_ichav7.jpg",
     },
+    refreshToken:{
+        type: String,
+        default: ""
+    },
     role: {
       type: String,
-      enum: ["admin"],
-      default: "admin",
+      enum: ["Admin"],
+      required: true
     },
+    verifyCode:{
+        type:Number,
+        required: true
+    }
   },
   { timestamps: true },
 );
