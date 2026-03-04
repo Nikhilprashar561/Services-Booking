@@ -9,7 +9,7 @@ import { auth } from "../middleware/auth.middleware.js";
 const adminRouter = express.Router();
 
 adminRouter.route("/register").post(adminRegister);
-adminRouter.route("/login").post(auth, adminLogin);
-adminRouter.route("/logout").post(auth, adminLogout);
+adminRouter.route("/login").post(adminLogin);
+adminRouter.route("/logout").get(auth, adminLogout);
 
 export { adminRouter };

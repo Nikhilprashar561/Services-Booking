@@ -60,7 +60,7 @@ const bookingRequestSchema = new mongoose.Schema(
       default: "Requested",
     },
     bookingDate: {
-      type: Date,
+      type: String,
       required: true,
     },
 

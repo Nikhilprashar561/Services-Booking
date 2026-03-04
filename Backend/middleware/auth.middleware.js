@@ -40,8 +40,8 @@ const auth = async (req, res, next) => {
     next();
   } catch (error) {
     throw new ApiErrors(
-      400,
-      "Invailid Request, Please Login First then you are able",
+      500,
+      `Invailid Request, Please Login First then you are able`,
     );
   }
 };

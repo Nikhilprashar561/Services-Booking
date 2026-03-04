@@ -5,7 +5,6 @@ const adminSchema = new mongoose.Schema(
     fullname: {
       type: String,
       required: true,
-      trim: true,
     },
     email: {
       type: String,
@@ -16,15 +15,13 @@ const adminSchema = new mongoose.Schema(
     },
     username: {
       type: String,
-      required: true,
       unique: true,
-      lowercase: true,
       trim: true,
+      default:""
     },
     password: {
       type: String,
       required: true,
-      minlength: 6,
     },
     phone_no: {
       type: String,
@@ -41,7 +38,6 @@ const adminSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      enum: ["Admin"],
       required: true
     },
     verifyCode:{

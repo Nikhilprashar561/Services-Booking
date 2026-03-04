@@ -51,12 +51,13 @@ const UserSchema = new mongoose.Schema(
     },
     avatar: {
       type: String,
-      default: "https://res.cloudinary.com/da9c3vejh/image/upload/v1772457451/307ce493-b254-4b2d-8ba4-d12c080d6651_ichav7.jpg",
+      default:
+        "https://res.cloudinary.com/da9c3vejh/image/upload/v1772457451/307ce493-b254-4b2d-8ba4-d12c080d6651_ichav7.jpg",
     },
     role: {
       type: String,
       enum: ["customer"],
-      required: true
+      required: true,
     },
     city: {
       type: String,
@@ -70,19 +71,21 @@ const UserSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    refreshToken:{
-        type: String,
-        default: ""
+    refreshToken: {
+      type: String,
+      default: "",
     },
 
     // Job Related
 
     address: addressSchema, // customer location where they are lived.
 
-    bookingRequest: { // Here Store a booking request details ID came from Booking Model.
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "bookingDetails",
-    },
+    bookingRequest:
+      {
+        // Here Store a booking request details ID came from Booking Model.
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "bookingDetails",
+      },
 
     servicesHistory: [
       // Here Store yours LocalService you take last jobs History.

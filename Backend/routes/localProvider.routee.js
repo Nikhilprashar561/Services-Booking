@@ -6,31 +6,28 @@ import {
   localProviderRegister,
 } from "../controller/localProvider.controllers.js";
 import {
-  isAcceptedLocalProvider,
-  isCancelLocalProvider,
-  isJobStatusLocalProvider,
-  isPaymentLocalProvider,
-  bookingDateLocalProvider,
-  statusLocalProvider,
+  requestStatus,
   finalPostLocalProvider,
-  reviewLocalProvider,
 } from "../controller/bookingRequest.controllers.js";
 import { auth } from "../middleware/auth.middleware.js";
+import { upload } from "../middleware/multer.js";
 
 const localProviderRouter = express.Router();
 
 localProviderRouter.route("/register").post(localProviderRegister);
-localProviderRouter.route("/login").post(auth, localProviderLogin);
-localProviderRouter.route("/address").post(auth, localProviderAddress);
-localProviderRouter.route("/logout").post(auth, localProviderLogout);
+localProviderRouter.route("/login").post(localProviderLogin);
+localProviderRouter.route("/address").put(auth, localProviderAddress);
+localProviderRouter.route("/logout").get(auth, localProviderLogout);
 
-localProviderRouter.route("/is-accept").post(auth, isAcceptedLocalProvider);
-localProviderRouter.route("/is-cancel").post(auth, isCancelLocalProvider);
-localProviderRouter.route("/isjob-status").post(auth, isJobStatusLocalProvider);
-localProviderRouter.route("/is-payment").post(auth, isPaymentLocalProvider);
-localProviderRouter.route("/booking-date").post(auth, bookingDateLocalProvider);
-localProviderRouter.route("/current-status").post(auth, statusLocalProvider);
-localProviderRouter.route("/final-post").post(auth, finalPostLocalProvider);
-localProviderRouter.route("/review").post(auth, reviewLocalProvider);
+localProviderRouter.route("/is-accept").post(auth, requestStatus);
+
+localProviderRouter.route("/final-post").post(
+  auth,
+  upload.fields([
+    { name: "BeforeWork", maxCount: 3 },
+    { name: "afterWork", maxCount: 3 },
+  ]),
+  finalPostLocalProvider,
+);
 
 export { localProviderRouter };

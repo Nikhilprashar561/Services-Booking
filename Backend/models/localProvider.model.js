@@ -56,9 +56,8 @@ const localProviderSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      enum: ["localProvider"],
-      required: true
-    //   default: "loacl provider",
+      required: true,
+      //   default: "local provider",
     },
     city: {
       type: String,
@@ -72,9 +71,9 @@ const localProviderSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
-    refreshToken:{
-        type: String,
-        default: ""
+    refreshToken: {
+      type: String,
+      default: "",
     },
 
     // Job Related
@@ -95,7 +94,7 @@ const localProviderSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    address: addressSchema, // loacl Provider location where they provide our services.
+    address: addressSchema, // local Provider location where they provide our services.
     experience: {
       type: Number,
       default: 0,
