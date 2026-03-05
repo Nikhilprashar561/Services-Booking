@@ -1,0 +1,26 @@
+// Local Services Provide Booking Platform 
+
+1. Frontend Host on vrcel :- Free tier
+2. Backend Deployment :- So there are two Platform who provide to host backend on free tier 1. Railway, 2. Render
+
+// So With my all Post Api completed Now time to fetch data...
+
+Before fetching data first add some 5 - 5 documents data through postman in all collection then try to fetch data.
+
+-- A admin full details api show in Frontend
+
+1. All Local provider data list :- In Frontend we filter it by it's category and according to need.
+2. All Customer data list only view for admin,
+3. All Booking request get api.
+
+4. Find a local provider by it's username or by it's category
+5. Find a LocalService provider by it's city name.
+6. fetch local service provider current bookingRequest and then return that bookingRequest full details
+7. Find Previous completed jobs list through servicesHistory
+
+8. Find Customer by it's city, username.
+9. Similar to LocalService provider also fetch customer current booking record and completed jobs task.
+
+10. Find bookingRequest by register user details ( means logged in user hoga uske details bookingRequest se id nikal ke get api bnani hai).
+11. Similar to do with LocalService Provider when they login get its details then waha se current bookingRequest
+ nikal ke show krna hai uske home page pe.
