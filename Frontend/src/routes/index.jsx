@@ -1,4 +1,4 @@
-import App from "@/App";
+import App from "../App";
 import { createBrowserRouter } from "react-router-dom";
 import AdminProfilePage from "@/pages/AdminProfilePage";
 import AdminRegister from "@/pages/AdminRegister";
