@@ -21,17 +21,9 @@ getApiRouter.route("/allCustomer").get(allCustomerDeatils);
 getApiRouter.route("/allBookingList").get(allBookingListDeatils);
 getApiRouter.route("/localProviderByCategory").get(localProviderByCategory);
 getApiRouter.route("/findCustomerByCategory").get(findCustomerByCategory);
-getApiRouter
-  .route("/findLocalProviderCurrentBooking")
-  .get(findLocalProviderCurrentBookingRequest);
-getApiRouter
-  .route("/findCustomerCurrentBooking")
-  .get(findCustomerCurrentBookingRequest);
-getApiRouter
-  .route("/findCustomerBookingHistory")
-  .get(findCustomerServicesHistory);
-getApiRouter
-  .route("/findLocalBookingHistory")
-  .get(findLocalProviderServicesHistory);
+getApiRouter.route("/findLocalProviderCurrentBooking").get(findLocalProviderCurrentBookingRequest);
+getApiRouter.route("/findCustomerCurrentBooking").get(findCustomerCurrentBookingRequest);
+getApiRouter.route("/findCustomerBookingHistory").get(findCustomerServicesHistory);
+getApiRouter.route("/findLocalBookingHistory").get(findLocalProviderServicesHistory);
 
 export { getApiRouter };
