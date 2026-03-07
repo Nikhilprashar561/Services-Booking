@@ -1,14 +1,15 @@
-import App from "../App";
 import { createBrowserRouter } from "react-router-dom";
-import AdminProfilePage from "@/pages/AdminProfilePage";
-import AdminRegister from "@/pages/AdminRegister";
-import Home from "@/pages/Home";
-import BookingDashboard from "@/pages/BookingDashboard";
-import BookingRequest from "@/pages/BookingRequest";
-import CustomerProfilePage from "@/pages/CustomerProfilePage";
-import CustomerRegister from "@/pages/CustomerRegister";
-import LocalProviderPage from "@/pages/LocalProviderPage";
-import LocalProviderRegister from "@/pages/LocalProviderRegister";
+
+import App from "../App";
+import AdminProfilePage from "../pages/AdminProfilePage";
+import AdminRegister from "../pages/AdminRegister";
+import Home from "../pages/Home";
+import BookingDashboard from "../pages/BookingDashboard";
+import BookingRequest from "../pages/BookingRequest";
+import CustomerProfilePage from "../pages/CustomerProfilePage";
+import CustomerRegister from "../pages/CustomerRegister";
+import LocalProviderPage from "../pages/LocalProviderPage";
+import LocalProviderRegister from "../pages/LocalProviderRegister";
 
 const router = createBrowserRouter([
   {
