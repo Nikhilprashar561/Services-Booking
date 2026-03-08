@@ -3,18 +3,28 @@ import { Link } from 'react-router-dom';
 
 const LocalProviderRegister = () => {
     return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+    <div className="flex items-center py-8 justify-center min-h-screen bg-gray-100 px-4">
       
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-sm">
 
         <div className="text-center mb-6">
           <h2 className="text-2xl font-bold text-gray-800">
-            Login
+            Register
           </h2>
         </div>
 
         <form className="flex flex-col gap-4">
 
+          <div>
+            <label className="text-sm font-medium text-gray-700">
+              Full Name
+            </label>
+            <input
+              type="text"
+              placeholder="Enter your fullname"
+              className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+            />
+          </div>
           <div>
             <label className="text-sm font-medium text-gray-700">
               Email Address
@@ -36,12 +46,52 @@ const LocalProviderRegister = () => {
               className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
             />
           </div>
+          <div>
+            <label className="text-sm font-medium text-gray-700">
+              City Name
+            </label>
+            <input
+              type="text"
+              placeholder="Enter your city"
+              className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label className="text-sm font-medium text-gray-700">
+              Category
+            </label>
+            <input
+              type="text"
+              placeholder="Enter your Specipfication"
+              className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label className="text-sm font-medium text-gray-700">
+              Price Per Hours
+            </label>
+            <input
+              type="number"
+              placeholder="Enter your price per hour"
+              className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label className="text-sm font-medium text-gray-700">
+              Experiance
+            </label>
+            <input
+              type="number"
+              placeholder="Enter your experiance"
+              className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
+            />
+          </div>
 
           <button
             type="submit"
             className="w-full bg-black cursor-pointer text-white py-2.5 rounded-md font-medium hover:bg-gray-900 transition"
           >
-            Login to Dashboard
+            Register
           </button>
         </form>
 
@@ -52,9 +102,9 @@ const LocalProviderRegister = () => {
         </div>
 
         <p className="text-sm text-center text-gray-600">
-          Don't have an account?{" "}
-          <Link to={"/admin-register"} className="text-black font-medium cursor-pointer hover:underline">
-            Register
+          Already have an account{" "}
+          <Link to={"/localProvider-login"} className="text-black font-medium cursor-pointer hover:underline">
+            Login
           </Link>
         </p>
 
