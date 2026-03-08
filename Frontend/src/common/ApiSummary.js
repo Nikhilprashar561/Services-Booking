@@ -1,4 +1,4 @@
-export const baseUrl = "http://localhost:3000";
+export const baseUrl = "https://services-booking-wn4a.onrender.com/";
 
 const ApiSummary = {
   adminRegister: {

@@ -10,6 +10,9 @@ import CustomerProfilePage from "../pages/CustomerProfilePage";
 import CustomerRegister from "../pages/CustomerRegister";
 import LocalProviderPage from "../pages/LocalProviderPage";
 import LocalProviderRegister from "../pages/LocalProviderRegister";
+import AdminLoginPage from "../pages/AdminLoginPage";
+import LocalProviderLogin from "../pages/LocalProviderLogin";
+import CustomerLogin from "../pages/CustomerLogin";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +54,18 @@ const router = createBrowserRouter([
       {
         path: "localProvider-register",
         element: <LocalProviderRegister />,
+      },
+      {
+        path: "admin-login",
+        element: <AdminLoginPage />,
+      },
+      {
+        path: "localProvider-login",
+        element: <LocalProviderLogin />,
+      },
+      {
+        path: "customer-login",
+        element: <CustomerLogin />,
       },
     ],
   },

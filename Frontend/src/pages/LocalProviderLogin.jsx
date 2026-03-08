@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const LocalProviderRegister = () => {
-    return (
+const LocalProviderLogin = () => {
+  return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
       
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-sm">
 
+        {/* Heading */}
         <div className="text-center mb-6">
           <h2 className="text-2xl font-bold text-gray-800">
             Login
@@ -53,7 +53,7 @@ const LocalProviderRegister = () => {
 
         <p className="text-sm text-center text-gray-600">
           Don't have an account?{" "}
-          <Link to={"/admin-register"} className="text-black font-medium cursor-pointer hover:underline">
+          <Link to={"/localProvider-register"} className="text-black font-medium cursor-pointer hover:underline">
             Register
           </Link>
         </p>
@@ -62,6 +62,6 @@ const LocalProviderRegister = () => {
     </div>
 
   );
-}
+};
 
-export default LocalProviderRegister
+export default LocalProviderLogin;

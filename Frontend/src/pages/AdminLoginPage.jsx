@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const LocalProviderRegister = () => {
+const AdminLoginPage = () => {
     return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
       
@@ -64,4 +64,4 @@ const LocalProviderRegister = () => {
   );
 }
 
-export default LocalProviderRegister
+export default AdminLoginPage

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const LocalProviderRegister = () => {
-    return (
+const CustomerLogin = () => {
+   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
       
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-sm">
@@ -53,7 +53,7 @@ const LocalProviderRegister = () => {
 
         <p className="text-sm text-center text-gray-600">
           Don't have an account?{" "}
-          <Link to={"/admin-register"} className="text-black font-medium cursor-pointer hover:underline">
+          <Link to={"/user-register"} className="text-black font-medium cursor-pointer hover:underline">
             Register
           </Link>
         </p>
@@ -64,4 +64,4 @@ const LocalProviderRegister = () => {
   );
 }
 
-export default LocalProviderRegister
+export default CustomerLogin
